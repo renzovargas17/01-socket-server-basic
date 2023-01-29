@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const http = require("http");
 const socketio = require("socket.io");
 const path = require("path");
@@ -16,6 +17,7 @@ class Server {
   }
   middlewares() {
     this.app.use(express.static(pathToPublic));
+    this.app.use(cors())
   }
   // // function X(req,res,next) {}
   // applyMiddlewares(arrayOfMiddlewares) {
