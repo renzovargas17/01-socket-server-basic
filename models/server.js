@@ -13,7 +13,7 @@ class Server {
     this.server = http.createServer(this.app);
     this.io = socketio(this.server, {
       cors: {
-        origin: "*"
+        origin: "https://01-socket-server-basic-j25r17ffy-renzovargas17.vercel.app/"
       }
     });
   }
